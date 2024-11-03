@@ -53,7 +53,7 @@
                             </nav>
                         </div>
                     </div>
-                    <main role="main" class="container">
+                    <main role="main" class="container component-article">
                         
                             <div class="mb-4 mt-3">
                                 <h1>
@@ -79,132 +79,97 @@
                                     style="width: 200px; height: 250px;"
                                     src="/assets/img/vendors/sap.png" />
                             
-                            
-            <p>
-                En Chile existe la gran preocupación entre distintas empresas,
-                debido a una serie de vulnerabilidades críticas en el sistema
-                ERP de gestión SAP, que permite a un atacante tomar control por
-                completo de la solución, ejecutar comandos dentro del servidor
-                alojado e incluso <b>acceder por completo a su base de
-                datos</b>.
-            </p>
-            <p>
-                Esto sucede principalmente debido a que SAP utiliza de manera
-                nativa una versión vulnerable de Log4J, específicamente aquella
-                que es vulnerable a la ejecución de código remoto debido al
-                mal manejo del interpretador JDNI (CVE-2021-44228 o
-                <b>Log4Shell</b>).
-            </p>
-            <h3 class="mt-4">El riesgo</h3>
-            <p>
-                A continuación, se desglosa el riesgo por cada vulnerabilidad:
-            </p>
-            <ul>
-                <li>
-                    <b>CVE-2021-44228</b> de severidad crítica, con una
-                    puntuación CVSS3 de 10. Esta se debe a un fallo en las
-                    características de configuración JDNI, el cual no valida los
-                    parámetros de entrada de los mensajes o parámetros de los
-                    logs. Esto permitiría a un atacante acceder a permisos de
-                    configuración y control de los logs con el objetivo de
-                    realizar ejecución remota de código (RCE) en el sistema
-                    afectado.
-                </li>
-                <li>
-                    <b>CVE-2022-24396</b> de severidad crítica, con una
-                    puntuación CVSS3 de 9.3. Esta vulnerabilidad se debe a un
-                    fallo en el componente de diagnóstico que permitiría a un
-                    atacante autenticado con mínimos privilegios realizar un
-                    escalamiento de privilegios u obtener información sensible.
-                </li>
-                <li>
-                    <b>CVE-2022-26101</b> de severidad alta, con una puntuación
-                    CVSS3 de 8.2. Esta vulnerabilidad se debe a una falla en un
-                    componente desconocido el cual no valida los datos de
-                    entrada del usuario. Esto permitiría a un atacante enviar
-                    peticiones maliciosas con el objetivo de ejecutar código
-                    JavaScript (XSS).
-                </li>
-            </ul>
-            <h3 class="mt-4">Algunas fuentes</h3>
-            <ul>
-                <li><a rel="noreferrer" target="_blank" href="https://www.cert.gov.py/noticias/actualizacion-de-seguridad-de-sap-subsana-multiples-vulnerabilidades-en-varios-productos">https://www.cert.gov.py/noticias/actualizacion-de-seguridad-de-sap-subsana-multiples-vulnerabilidades-en-varios-productos</a>
-                <li><a rel="noreferrer" target="_blank" href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228">https://nvd.nist.gov/vuln/detail/CVE-2021-44228</a></li>
-                <li><a rel="noreferrer" target="_blank" href="https://nvd.nist.gov/vuln/detail/CVE-2022-24396">https://nvd.nist.gov/vuln/detail/CVE-2022-24396</a></li>
-                <li><a rel="noreferrer" target="_blank" href="https://nvd.nist.gov/vuln/detail/CVE-2022-26101">https://nvd.nist.gov/vuln/detail/CVE-2022-26101</a></li>
-            </ul>
-
-            <h3 class="mt-4">Análisis del impacto</h3>
-            <p>
-                No confundir que la vulnerabilidad Log4Shell (CVE-2021-44228)
-                sea relativamente antigua, esto no quiere decir que algunos
-                software aun hagan uso de el como es en el caso de SAP, en otras
-                palabras, SAP cuenta con la vulnerabilidad reciente de que
-                incluye este componente vulnerable.
-            </p>
-            <p>
-                Este riesgo es preocupante debido <b>a que un atacante que logre
-                acceder al servicio de SAP sin la necesidad de autenticarse
-                podría ejecutar comandos dentro del servidor</b> donde se encuentre
-                esta solucón.
-            </p>
-            <p>
-                Pero, <b>¿esto quiere decir que si se encuentra dentro de una
-                red local el riesgo disminuye?</b>: la respuesta es si pero
-                <b>no lo suficiente</b>. A lo largo de los años se han habido
-                presedentes de ataques realizados por personal interno en
-                diferentes compañías grandes y pequeñas <b>en Chile</b> y
-                tampoco son casos aislados, este tipo de incidencias <b>ocurren
-                con mayor frecuencia de lo pensado</b>.
-            </p>
-            <p>
-                Los desastres no curren sin más, son el resultado de una serie
-                de sucedos que conllevan a una incidencia de proporciones
-                mayores que pueden afectar no solamente a la contabilidad de
-                una compañía sino también a posibles problemas legales y de
-                pérdida de imagen corporativa.
-            </p>
-            <p>
-                Técnicamente hablando un atacante podría realizar una solicitud
-                HTTP al servidor de SAP y enviar un paquete malicioso con código
-                de ejecución, permitiendo al atacante, por ejemplo <b>conectar a
-                la base de datos y modificar información como credenciales de
-                acceso o datos de contabilidad, también podría descargar
-                software malicioso de tipo Troyano y tomar control del servidor
-                o infectar la infraestructura con malware de tipo
-                Ransomware</b>.
-            </p>
-
-            <h3 class="mt-4">Recomendaciones a los usuarios</h3>
-            <p>
-                <b>Primero que nada</b> esta vulnerabilidad ha sido solucionada
-                hace muy poco, asi que la recomendación es muy clara, se debe
-                actualizar el Software vulnerable lo antes posible para evitar
-                una incidencia mayor.
-            </p>
-            <p>
-                La actualización de un Sistema no solamente cuenta con cambios a
-                nivel de experiencia de usuario sino también de seguridad, por eso
-                se recomienda mantener los sistemas y aplicaciones siempre
-                actualizados.
-            </p>
-            <p>
-                <b>Como segunda medida</b>, como esta vulnerabilidad puede ser
-                aprovechada de manera remota, se recomienda realizar un análisis
-                de sistema o forense a la brevedad para <b>determinar sin en la
-                actualidad existió algún ataque que haya podido afectar a los
-                datos confidenciales de los correos almacenados</b>, si este
-                fuese el caso se recomienda activar un procedimiento de
-                seguridad para el cambio de credenciales de manera masiva de los
-                sistemas de la compañía.
-            </p>
-            <p>
-                <b>Como última recomendación</b>, se recomienda aplicar un
-                agente mitigante ya sea de tipo IPS de Firewall o WAF. Cabe
-                recordar que una mitigación no soluciona un problema y siempre
-                existe una posibilidad de que estas reglas puedan ser evadidas.
-            </p>
-        
+                            <p>En Chile existe la gran preocupación entre distintas empresas,
+debido a una serie de vulnerabilidades críticas en el sistema
+ERP de gestión SAP, que permite a un atacante tomar control por
+completo de la solución, ejecutar comandos dentro del servidor
+alojado e incluso <strong>acceder por completo a su base de
+datos</strong>.</p>
+<p>Esto sucede principalmente debido a que SAP utiliza de manera
+nativa una versión vulnerable de Log4J, específicamente aquella
+que es vulnerable a la ejecución de código remoto debido al
+mal manejo del interpretador JDNI (CVE-2021-44228 o <strong>Log4Shell</strong>).</p>
+<h3 id="elriesgo">El riesgo</h3>
+<p>A continuación, se desglosa el riesgo por cada vulnerabilidad:</p>
+<ul>
+<li><p><strong>CVE-2021-44228</strong> de severidad crítica, con una
+puntuación CVSS3 de 10. Esta se debe a un fallo en las
+características de configuración JDNI, el cual no valida los
+parámetros de entrada de los mensajes o parámetros de los
+logs. Esto permitiría a un atacante acceder a permisos de
+configuración y control de los logs con el objetivo de
+realizar ejecución remota de código (RCE) en el sistema
+afectado.</p></li>
+<li><p><strong>CVE-2022-24396</strong> de severidad crítica, con una
+puntuación CVSS3 de 9.3. Esta vulnerabilidad se debe a un
+fallo en el componente de diagnóstico que permitiría a un
+atacante autenticado con mínimos privilegios realizar un
+escalamiento de privilegios u obtener información sensible.</p></li>
+<li><p><strong>CVE-2022-26101</strong> de severidad alta, con una puntuación
+CVSS3 de 8.2. Esta vulnerabilidad se debe a una falla en un
+componente desconocido el cual no valida los datos de
+entrada del usuario. Esto permitiría a un atacante enviar
+peticiones maliciosas con el objetivo de ejecutar código
+JavaScript (XSS).</p></li>
+</ul>
+<h3 id="algunasfuentes">Algunas fuentes</h3>
+<ul>
+<li><a href="https://www.cert.gov.py/noticias/actualizacion-de-seguridad-de-sap-subsana-multiples-vulnerabilidades-en-varios-productos" rel="noopener noreferrer" target="_blank">https://www.cert.gov.py/noticias/actualizacion-de-seguridad-de-sap-subsana-multiples-vulnerabilidades-en-varios-productos</a></li>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2021-44228</a></li>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2022-24396" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2022-24396</a></li>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2022-26101" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2022-26101</a></li>
+</ul>
+<h3 id="anlisisdelimpacto">Análisis del impacto</h3>
+<p>No confundir que la vulnerabilidad Log4Shell (CVE-2021-44228)
+sea relativamente antigua, esto no quiere decir que algunos
+software aun hagan uso de el como es en el caso de SAP, en otras
+palabras, SAP cuenta con la vulnerabilidad reciente de que
+incluye este componente vulnerable.</p>
+<p>Este riesgo es preocupante debido <strong>a que un atacante que logre
+acceder al servicio de SAP sin la necesidad de autenticarse
+podría ejecutar comandos dentro del servidor</strong> donde se encuentre
+esta solucón.</p>
+<p>Pero, <strong>¿esto quiere decir que si se encuentra dentro de una
+red local el riesgo disminuye?</strong>: la respuesta es si pero
+<strong>no lo suficiente</strong>. A lo largo de los años se han habido
+presedentes de ataques realizados por personal interno en
+diferentes compañías grandes y pequeñas <strong>en Chile</strong> y
+tampoco son casos aislados, este tipo de incidencias <strong>ocurren
+con mayor frecuencia de lo pensado</strong>.</p>
+<p>Los desastres no curren sin más, son el resultado de una serie
+de sucedos que conllevan a una incidencia de proporciones
+mayores que pueden afectar no solamente a la contabilidad de
+una compañía sino también a posibles problemas legales y de
+pérdida de imagen corporativa.</p>
+<p>Técnicamente hablando un atacante podría realizar una solicitud
+HTTP al servidor de SAP y enviar un paquete malicioso con código
+de ejecución, permitiendo al atacante, por ejemplo <strong>conectar a
+la base de datos y modificar información como credenciales de
+acceso o datos de contabilidad, también podría descargar
+software malicioso de tipo Troyano y tomar control del servidor
+o infectar la infraestructura con malware de tipo
+Ransomware</strong>.</p>
+<h3 id="recomendacionesalosusuarios">Recomendaciones a los usuarios</h3>
+<p><strong>Primero que nada</strong> esta vulnerabilidad ha sido solucionada
+hace muy poco, asi que la recomendación es muy clara, se debe
+actualizar el Software vulnerable lo antes posible para evitar
+una incidencia mayor.</p>
+<p>La actualización de un Sistema no solamente cuenta con cambios a
+nivel de experiencia de usuario sino también de seguridad, por eso
+se recomienda mantener los sistemas y aplicaciones siempre
+actualizados.</p>
+<p><strong>Como segunda medida</strong>, como esta vulnerabilidad puede ser
+aprovechada de manera remota, se recomienda realizar un análisis
+de sistema o forense a la brevedad para <strong>determinar sin en la
+actualidad existió algún ataque que haya podido afectar a los
+datos confidenciales de los correos almacenados</strong>, si este
+fuese el caso se recomienda activar un procedimiento de
+seguridad para el cambio de credenciales de manera masiva de los
+sistemas de la compañía.</p>
+<p><strong>Como última recomendación</strong>, se recomienda aplicar un
+agente mitigante ya sea de tipo IPS de Firewall o WAF. Cabe
+recordar que una mitigación no soluciona un problema y siempre
+existe una posibilidad de que estas reglas puedan ser evadidas.</p>
                             <div class="clearfix"></div>
 
                             

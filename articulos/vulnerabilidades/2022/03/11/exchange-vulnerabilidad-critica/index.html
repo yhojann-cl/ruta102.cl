@@ -53,7 +53,7 @@
                             </nav>
                         </div>
                     </div>
-                    <main role="main" class="container">
+                    <main role="main" class="container component-article">
                         
                             <div class="mb-4 mt-3">
                                 <h1>
@@ -79,146 +79,122 @@
                                     style="width: 200px; height: 250px;"
                                     src="/assets/img/vendors/microsoft-exchange.png" />
                             
-                            
-            <h3>Resumen</h3>
-            <p>
-                En Chile existe la gran preocupación entre distintas entidades
-                importantes, debido a una vulnerabilidad crítica que podría
-                poner en riesgo la continuidad de sus operaciones.
-            </p>
-            <p>
-                Se publicó un problema de seguridad crítico en Microsoft
-                Exchange 2019 el cual permite la ejecución de código remoto,
-                esto quiere decir que un atacante desde internet tiene la
-                posibilidad de acceder a la información interna del servicio de
-                correos, modificar o eliminar información, también podría
-                ejecutar comandos sin autorización dentro del Sistema Operativo.
-            </p>
-            <p class="clearfix">
-                Desde Microsoft indican que ya existe una prueba de concepto
-                que permite explotar esta vulnerabilidad, por lo cual <b>pueden
-                existir atacantes que ya lo estén aprovechando en servidores
-                vulnerables</b>.
-            </p>
-            <h3 class="mt-4">El riesgo</h3>
-            <p>
-                Esta vulnerabilidad tiene un valor de riesgo de 9.9 (Cr&iacute;tico) en la
-                <a target="_blank" rel="noreferrer" href="https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H&version=3.1">
-                    tabla de criticidad de la CVSS3
-                </a>, tal comos e puede observar a continuación:
-            </p>
-
-            <div class="border rounded overflow-hidden p-2 mb-2">
-                <table class="table table-dark table-striped table-cvss m-0">
-                    <tbody>
-                        <tr>
-                            <td>Vector de ataque</td>
-                            <td>Red</td>
-                        </tr>
-                        <tr>
-                            <td>Complejidad del ataque</td>
-                            <td>Bajo</td>
-                        </tr>
-                        <tr>
-                            <td>Privilegios requeridos</td>
-                            <td>Bajo</td>
-                        </tr>
-                        <tr>
-                            <td>Interacci&oacute;n con el usuario</td>
-                            <td>Ninguno</td>
-                        </tr>
-                        <tr>
-                            <td>Alcance</td>
-                            <td>Cambia</td>
-                        </tr>
-                        <tr>
-                            <td>Impacto a la confidencialidad</td>
-                            <td>Alto</td>
-                        </tr>
-                        <tr>
-                            <td>Impacto a la integridad</td>
-                            <td>Alto</td>
-                        </tr>
-                        <tr>
-                            <td>Impacto a la disponibilidad</td>
-                            <td>Alto</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 class="mt-4">Algunas fuentes</h3>
-            <ul>
-                <li><a rel="noreferrer" target="_blank" href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23277">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23277</a></li>
-                <li><a rel="noreferrer" target="_blank" href="https://nvd.nist.gov/vuln/detail/CVE-2022-23277">https://nvd.nist.gov/vuln/detail/CVE-2022-23277</a></li>
-            </ul>
-
-            <h3 class="mt-4">Análisis del impacto</h3>
-            <p>
-                El título de la vulnerabilidad indica que es posible la
-                ejecución de código, pero ¿cómo es esto posible?: Realmente
-                no es un problema de desbordamiento de memoria o un puntero mal
-                gestionado, sino mas bien de elevación de privilegios debido
-                a un problema en el control de la autorización de ciertas
-                funcionalidades que permiten a un usuario sin privilegios tener
-                un rol máximo permitiendo así realizar cambios sobre la consola
-                de configuración de Microsoft Exchange y ejecutar comandos
-                de manera directa sobre el Sistema Operativo que lo aloja.
-            </p>
-            <p>
-                Por lo cual ¿que podría hacer un atacante con esto?: Básicamente
-                acceder a cualquier información alojada en el servidor ya que
-                debemos recordar que Microsoft Exchange tiene la pésima práctica
-                de seguridad de <b>utilizar un usuario con privilegios elevados
-                dentro del Sistema Operativo (NT AUTHORITYSYSTEM)</b>, en ves
-                de ejecutarse con algún usuario restringido únicamente para
-                Microsoft Exchange. Esto permite que un atacante no solo pueda
-                acceder a los datos alojados sino también intentar acceder a
-                otros servidores dentro de la misma red impactando así a la
-                infraestructura de la compañía.
-            </p>
-            <p>
-                <b>Debemos recordar también que en muchas ocaciones se envían
-                contraseñas y documentos confidenciales por correo electrónico
-                y todos estos datos pueden serse afectados, más aun cuando estas
-                contraseñas son reutilizadas en otros sistemas, los cuales
-                permitan a un atacante tomar control de toda la infraestructura
-                de la compañía como por ejemplo, el Active Directory</b>.
-            </p>
-
-            <h3 class="mt-4">Recomendaciones a los usuarios</h3>
-            <p>
-                <b>Primero que nada</b> esta vulnerabilidad ha sido solucionada
-                hace muy poco, asi que la recomendación es muy clara, se debe
-                actualizar el Software vulnerable lo antes posible para evitar
-                una incidencia mayor.
-            </p>
-            <p>
-                La actualización de un Sistema no solamente cuenta con cambios a
-                nivel de experiencia de usuario sino también de seguridad, por eso
-                se recomienda mantener los sistemas y aplicaciones siempre
-                actualizados.
-            </p>
-            <p>
-                <b>Como segunda medida</b>, como esta vulnerabilidad puede ser
-                aprovechada de manera remota, se recomienda realizar un análisis
-                de sistema o forense a la brevedad para <b>determinar sin en la
-                actualidad existió algún ataque que haya podido afectar a los
-                datos confidenciales de los correos almacenados</b>, si este
-                fuese el caso se recomienda activar un procedimiento de
-                seguridad para el cambio de credenciales de manera masiva de los
-                sistemas de la compañía.
-            </p>
-            <p>
-                <b>Como última recomendación</b>, se debe recordar que el correo
-                electrónico no es un canal 100% seguro, por lo cual se debe
-                evitar el envío de credenciales o información crítica a traves
-                de este medio, pero en caso contrario se recomienda eliminar
-                estos correos al momento de recibirlos y realizar un limpiado
-                periódico de los posibles mensajes que pudiesen ser
-                perjudiciales en una filtración de datos.
-            </p>
-        
+                            <h3 id="resumen">Resumen</h3>
+<p>En Chile existe la gran preocupación entre distintas entidades
+importantes, debido a una vulnerabilidad crítica que podría
+poner en riesgo la continuidad de sus operaciones.</p>
+<p>Se publicó un problema de seguridad crítico en Microsoft
+Exchange 2019 el cual permite la ejecución de código remoto,
+esto quiere decir que un atacante desde internet tiene la
+posibilidad de acceder a la información interna del servicio de
+correos, modificar o eliminar información, también podría
+ejecutar comandos sin autorización dentro del Sistema Operativo.</p>
+<p>Desde Microsoft indican que ya existe una prueba de concepto
+que permite explotar esta vulnerabilidad, por lo cual <strong>pueden
+existir atacantes que ya lo estén aprovechando en servidores
+vulnerables</strong>.</p>
+<div class="clearfix"></div>
+<h3 id="elriesgo">El riesgo</h3>
+<p>Esta vulnerabilidad tiene un valor de riesgo de 9.9 (Crítico) en la
+<a href="https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H&version=3.1" rel="noopener noreferrer" target="_blank">tabla de criticidad de la CVSS3</a>,
+tal comos e puede observar a continuación:</p>
+<div class="border rounded overflow-hidden p-2 mb-2"><table class="table table-dark table-striped m-0">
+<thead>
+<tr>
+<th>Dato</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vector de ataque</td>
+<td>Red</td>
+</tr>
+<tr>
+<td>Complejidad del ataque</td>
+<td>Bajo</td>
+</tr>
+<tr>
+<td>Privilegios requeridos</td>
+<td>Bajo</td>
+</tr>
+<tr>
+<td>Interacción con el usuario</td>
+<td>Ninguno</td>
+</tr>
+<tr>
+<td>Alcance</td>
+<td>Cambia</td>
+</tr>
+<tr>
+<td>Impacto a la confidencialidad</td>
+<td>Alto</td>
+</tr>
+<tr>
+<td>Impacto a la integridad</td>
+<td>Alto</td>
+</tr>
+<tr>
+<td>Impacto a la disponibilidad</td>
+<td>Alto</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="algunasfuentes">Algunas fuentes</h3>
+<ul>
+<li><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23277" rel="noopener noreferrer" target="_blank">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23277</a></li>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2022-23277" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2022-23277</a></li>
+</ul>
+<h3 id="anlisisdelimpacto">Análisis del impacto</h3>
+<p>El título de la vulnerabilidad indica que es posible la
+ejecución de código, pero ¿cómo es esto posible?: Realmente
+no es un problema de desbordamiento de memoria o un puntero mal
+gestionado, sino mas bien de elevación de privilegios debido
+a un problema en el control de la autorización de ciertas
+funcionalidades que permiten a un usuario sin privilegios tener
+un rol máximo permitiendo así realizar cambios sobre la consola
+de configuración de Microsoft Exchange y ejecutar comandos
+de manera directa sobre el Sistema Operativo que lo aloja.</p>
+<p>Por lo cual ¿que podría hacer un atacante con esto?: Básicamente
+acceder a cualquier información alojada en el servidor ya que
+debemos recordar que Microsoft Exchange tiene la pésima práctica
+de seguridad de <strong>utilizar un usuario con privilegios elevados
+dentro del Sistema Operativo (NT AUTHORITY\SYSTEM)</strong>, en ves
+de ejecutarse con algún usuario restringido únicamente para
+Microsoft Exchange. Esto permite que un atacante no solo pueda
+acceder a los datos alojados sino también intentar acceder a
+otros servidores dentro de la misma red impactando así a la
+infraestructura de la compañía.</p>
+<p><strong>Debemos recordar también que en muchas ocaciones se envían
+contraseñas y documentos confidenciales por correo electrónico
+y todos estos datos pueden serse afectados, más aun cuando estas
+contraseñas son reutilizadas en otros sistemas, los cuales
+permitan a un atacante tomar control de toda la infraestructura
+de la compañía como por ejemplo, el Active Directory</strong>.</p>
+<h3 id="recomendacionesalosusuarios">Recomendaciones a los usuarios</h3>
+<p><strong>Primero que nada</strong> esta vulnerabilidad ha sido solucionada
+hace muy poco, asi que la recomendación es muy clara, se debe
+actualizar el Software vulnerable lo antes posible para evitar
+una incidencia mayor.</p>
+<p>La actualización de un Sistema no solamente cuenta con cambios a
+nivel de experiencia de usuario sino también de seguridad, por eso
+se recomienda mantener los sistemas y aplicaciones siempre
+actualizados.</p>
+<p><strong>Como segunda medida</strong>, como esta vulnerabilidad puede ser
+aprovechada de manera remota, se recomienda realizar un análisis
+de sistema o forense a la brevedad para <strong>determinar sin en la
+actualidad existió algún ataque que haya podido afectar a los
+datos confidenciales de los correos almacenados</strong>, si este
+fuese el caso se recomienda activar un procedimiento de
+seguridad para el cambio de credenciales de manera masiva de los
+sistemas de la compañía.</p>
+<p><strong>Como última recomendación</strong>, se debe recordar que el correo
+electrónico no es un canal 100% seguro, por lo cual se debe
+evitar el envío de credenciales o información crítica a traves
+de este medio, pero en caso contrario se recomienda eliminar
+estos correos al momento de recibirlos y realizar un limpiado
+periódico de los posibles mensajes que pudiesen ser
+perjudiciales en una filtración de datos.</p>
                             <div class="clearfix"></div>
 
                             

@@ -53,7 +53,7 @@
                             </nav>
                         </div>
                     </div>
-                    <main role="main" class="container">
+                    <main role="main" class="container component-article">
                         
                             <div class="mb-4 mt-3">
                                 <h1>
@@ -79,111 +79,77 @@
                                     style="width: 200px; height: 250px;"
                                     src="/assets/img/vendors/ups-apc.png" />
                             
-                            
-            <h3>Resumen</h3>
-            <p>
-                En Chile existe la gran preocupación entre distintas empresas,
-                debido a una serie de vulnerabilidades en equipos UPS de
-                respaldo de energía que podría poner en jaque el suministro
-                eléctrico y sus equipos conectados.
-            </p>
-            <p>
-                Se ha publicado recientemente diversos problemas en los sistemas
-                UPS de protección de energía de la empresa APC los cuales pueden
-                comprometer el sistema de suministro en una empresa. Lo más
-                preocupante es que esta vulnerabilidad puede ser aprovechada de
-                manera remota y <b>puede provocar un daño físico a los
-                equipos</b>.
-            </p>
-            <p>
-                Este grupo de vulnerabilidades ha sido llamada TLStorm y se ha
-                catalogado por los expertos como una de las vulnerabilidades más
-                preocupantes de lo que va del año.
-            </p>
-            <p>
-                Cabe mencionar que estos equipos de protección de energía son
-                componentes críticos para distintas infraestructuras, tales como
-                de gobierno, salud, seguridad física en general, centros de
-                datos y similares.
-            </p>
-            <h3 class="mt-4">El riesgo</h3>
-            <p>
-                A continuación, se desglosa el riesgo por cada vulnerabilidad:
-            </p>
-            <ul>
-                <li>
-                    <b>CVE-2022-22806</b> de severidad crítica, con una puntuación CVSS3 9.0. Esta vulnerabilidad se debe a errores de la biblioteca nanoSSL, provocando un problema de estado en el protocolo de enlace TLS, omitiendo la autenticación de este (TLS), con lo cual permitiría a un atacante remoto no autenticado la ejecución remota de código (RCE).
-                </li>
-                <li>
-                    <b>CVE-2022-22805</b> de severidad crítica, con una puntuación CVSS3 9.0. Esta vulnerabilidad se debe a errores de la biblioteca nanoSSL, provocando un error de corrupción de memoria en el reensamblaje de paquetes. Un atacante remoto no autenticado podría aprovechar el error de biblioteca nanoSSL y realizar ejecución remota de código (RCE).
-                </li>
-                <li>
-                    <b>CVE-2022-0715</b> de severidad crítica, con una puntuación CVSS 9.0. Esta vulnerabilidad se debe a una falla de diseño, en la que las actualizaciones de firmware en los dispositivos afectados no se firman criptográficamente de manera segura. Un atacante podría aprovechar esta vulnerabilidad y crear firmware malintencionado e instalarlo mediante varias rutas, como Internet, LAN o una unidad USB, provocando la ejecución remota de código (RCE).
-                </li>
-            </ul>
-            <h3 class="mt-4">Algunas fuentes</h3>
-            <ul>
-                <li><a rel="noreferrer" target="_blank" href="https://nvd.nist.gov/vuln/detail/CVE-2022-22806">https://nvd.nist.gov/vuln/detail/CVE-2022-22806</a></li>
-                <li><a rel="noreferrer" target="_blank" href="https://www.cert.gov.py/noticias/vulnerabilidades-criticas-en-los-dispositivos-smart-ups-de-apc">https://www.cert.gov.py/noticias/vulnerabilidades-criticas-en-los-dispositivos-smart-ups-de-apc</a></li>
-                <li><a rel="noreferrer" target="_blank" href="https://www.armis.com/research/tlstorm/">https://www.armis.com/research/tlstorm/</a>
-                <li><a rel="noreferrer" target="_blank" href="https://underc0de.org/foro/noticias-informaticas-120/los-errores-de-dia-cero-de-apc-ups-pueden-quemar-dispositivos-de-forma-remota/">https://underc0de.org/foro/noticias-informaticas-120/los-errores-de-dia-cero-de-apc-ups-pueden-quemar-dispositivos-de-forma-remota/</a></li>
-            </ul>
-
-            <h3 class="mt-4">Análisis del impacto</h3>
-            <p>
-                Según fuentes oficiales, el problema principal reside en la
-                <b>implementación de SSL/TLS</b>, un protocolo ámpliamente
-                utilizado para el resguardo de la comunicación entre servicios
-                bajo TCP, pero en este caso el componente afectado es la
-                funcionalidad de <b>SmartConnect</b> el cual se encarga de la
-                comunicación entre diferentes dispositivos de Smart-UPS.
-                Directamente hablando se trata de la <b>ejecución de código
-                debido a la corrupción de memoria</b> por a un desbbordamiento
-                no controlado.
-            </p>
-            <p>
-                Adicionalmente a este problema, también cuenta con otra
-                vulnerabilidad totalmente distinta la cual permite a un
-                delincuente informático a <b>evadir el mecanismo de encriptado
-                del Firmware</b> debido a que este carece de una llave
-                criptográfica.
-            </p>
-            <p>
-                Estas dos vulnerabilidades juntas <b>pueden permitir a un atacante
-                dentro de la red local del equipo afectado, corromper la memoria
-                de estos equipos e instalar un nuevo firmware infectado</b>.
-            </p>
-            <p>
-                Hay que recordar que estos equipos mantienen una conectividad de
-                manera física con los componentes electrónicos <b>sin ningún
-                mecanismo de tipo Sandboxing o isolación</b> que pudiesen
-                proteger al circuito eléctrico de posibles ataques vía Software
-                como si lo hace una placa madre de un computador, servidor o
-                dispositivo móvil. Esto abre la posibilidad de <b>estropear
-                físicamente los componentes a traves del cambio de voltaje,
-                interrupciones y similares</b>.
-            </p>
-
-            <h3 class="mt-4">Recomendaciones a los usuarios</h3>
-            <p>
-                Schneider Electric ha publicado recientemente
-                <a rel="noreferrer" target="_blank" href="ttps://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2022-067-02">una
-                actualización de seguridad crítica</a> que soluciona este
-                problema, por lo cual se recomienda aplicar este parche lo antes
-                posible.
-            </p>
-            <p>
-                <a rel="noreferrer" target="_blank" href="https://www.armis.com/research/tlstorm/">El
-                grupo de investigación Armis</a> que ha encontrado este fallo y
-                lo ha reportado oportunamente mencionan las siguientes
-                recomendaciones:
-            </p>
-            <ul>
-                <li>Instale los parches disponibles en el sitio web de Schneider Electric.</li>
-                <li>Si está utilizando la NMC, cambie la contraseña predeterminada de la NMC ("apc") e instale un certificado SSL firmado públicamente para que un atacante en su red no pueda interceptar la nueva contraseña. Para limitar aún más la superficie de ataque de su NMC, consulte el Manual de seguridad de Schneider Electric para NMC2 y NMC3.</li>
-                <li>Implemente listas de control de acceso (ACL) en las que los dispositivos UPS solo pueden comunicarse con un pequeño conjunto de dispositivos de administración y Schneider Electric Cloud a través de comunicaciones cifradas.</li>
-            </ul>
-        
+                            <h3 id="resumen">Resumen</h3>
+<p>En Chile existe la gran preocupación entre distintas empresas,
+debido a una serie de vulnerabilidades en equipos UPS de
+respaldo de energía que podría poner en jaque el suministro
+eléctrico y sus equipos conectados.</p>
+<p>Se ha publicado recientemente diversos problemas en los sistemas
+UPS de protección de energía de la empresa APC los cuales pueden
+comprometer el sistema de suministro en una empresa. Lo más
+preocupante es que esta vulnerabilidad puede ser aprovechada de
+manera remota y <strong>puede provocar un daño físico a los
+equipos</strong>.</p>
+<p>Este grupo de vulnerabilidades ha sido llamada TLStorm y se ha
+catalogado por los expertos como una de las vulnerabilidades más
+preocupantes de lo que va del año.</p>
+<p>Cabe mencionar que estos equipos de protección de energía son
+componentes críticos para distintas infraestructuras, tales como
+de gobierno, salud, seguridad física en general, centros de
+datos y similares.</p>
+<h3 id="elriesgo">El riesgo</h3>
+<p>A continuación, se desglosa el riesgo por cada vulnerabilidad:</p>
+<ul>
+<li><strong>CVE-2022-22806</strong> de severidad crítica, con una puntuación CVSS3 9.0. Esta vulnerabilidad se debe a errores de la biblioteca nanoSSL, provocando un problema de estado en el protocolo de enlace TLS, omitiendo la autenticación de este (TLS), con lo cual permitiría a un atacante remoto no autenticado la ejecución remota de código (RCE).</li>
+<li><strong>CVE-2022-22805</strong> de severidad crítica, con una puntuación CVSS3 9.0. Esta vulnerabilidad se debe a errores de la biblioteca nanoSSL, provocando un error de corrupción de memoria en el reensamblaje de paquetes. Un atacante remoto no autenticado podría aprovechar el error de biblioteca nanoSSL y realizar ejecución remota de código (RCE).</li>
+<li><strong>CVE-2022-0715</strong> de severidad crítica, con una puntuación CVSS 9.0. Esta vulnerabilidad se debe a una falla de diseño, en la que las actualizaciones de firmware en los dispositivos afectados no se firman criptográficamente de manera segura. Un atacante podría aprovechar esta vulnerabilidad y crear firmware malintencionado e instalarlo mediante varias rutas, como Internet, LAN o una unidad USB, provocando la ejecución remota de código (RCE).</li>
+</ul>
+<h3 id="algunasfuentes">Algunas fuentes</h3>
+<ul>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22806" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2022-22806</a></li>
+<li><a href="https://www.cert.gov.py/noticias/vulnerabilidades-criticas-en-los-dispositivos-smart-ups-de-apc" rel="noopener noreferrer" target="_blank">https://www.cert.gov.py/noticias/vulnerabilidades-criticas-en-los-dispositivos-smart-ups-de-apc</a></li>
+<li><a href="https://www.armis.com/research/tlstorm/" rel="noopener noreferrer" target="_blank">https://www.armis.com/research/tlstorm/</a></li>
+<li><a href="https://underc0de.org/foro/noticias-informaticas-120/los-errores-de-dia-cero-de-apc-ups-pueden-quemar-dispositivos-de-forma-remota/" rel="noopener noreferrer" target="_blank">https://underc0de.org/foro/noticias-informaticas-120/los-errores-de-dia-cero-de-apc-ups-pueden-quemar-dispositivos-de-forma-remota/</a></li>
+</ul>
+<h3 id="anlisisdelimpacto">Análisis del impacto</h3>
+<p>Según fuentes oficiales, el problema principal reside en la
+<strong>implementación de SSL/TLS</strong>, un protocolo ámpliamente
+utilizado para el resguardo de la comunicación entre servicios
+bajo TCP, pero en este caso el componente afectado es la
+funcionalidad de <strong>SmartConnect</strong> el cual se encarga de la
+comunicación entre diferentes dispositivos de Smart-UPS.
+Directamente hablando se trata de la <strong>ejecución de código
+debido a la corrupción de memoria</strong> por a un desbbordamiento
+no controlado.</p>
+<p>Adicionalmente a este problema, también cuenta con otra
+vulnerabilidad totalmente distinta la cual permite a un
+delincuente informático a <strong>evadir el mecanismo de encriptado
+del Firmware</strong> debido a que este carece de una llave
+criptográfica.</p>
+<p>Estas dos vulnerabilidades juntas <strong>pueden permitir a un atacante
+dentro de la red local del equipo afectado, corromper la memoria
+de estos equipos e instalar un nuevo firmware infectado</strong>.</p>
+<p>Hay que recordar que estos equipos mantienen una conectividad de
+manera física con los componentes electrónicos <strong>sin ningún
+mecanismo de tipo Sandboxing o isolación</strong> que pudiesen
+proteger al circuito eléctrico de posibles ataques vía Software
+como si lo hace una placa madre de un computador, servidor o
+dispositivo móvil. Esto abre la posibilidad de <strong>estropear
+físicamente los componentes a traves del cambio de voltaje,
+interrupciones y similares</strong>.</p>
+<h3 id="recomendacionesalosusuarios">Recomendaciones a los usuarios</h3>
+<p>Schneider Electric ha publicado recientemente
+<a href="https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2022-067-02" rel="noopener noreferrer" target="_blank">una actualización de seguridad crítica</a>
+que soluciona este problema, por lo cual se recomienda aplicar este parche lo
+antes posible.</p>
+<p><a href="https://www.armis.com/research/tlstorm/" rel="noopener noreferrer" target="_blank">El grupo de investigación Armis</a> que
+ha encontrado este fallo y lo ha reportado oportunamente mencionan las
+siguientes recomendaciones:</p>
+<ul>
+<li>Instale los parches disponibles en el sitio web de Schneider Electric.</li>
+<li>Si está utilizando la NMC, cambie la contraseña predeterminada de la NMC ("apc") e instale un certificado SSL firmado públicamente para que un atacante en su red no pueda interceptar la nueva contraseña. Para limitar aún más la superficie de ataque de su NMC, consulte el Manual de seguridad de Schneider Electric para NMC2 y NMC3.</li>
+<li>Implemente listas de control de acceso (ACL) en las que los dispositivos UPS solo pueden comunicarse con un pequeño conjunto de dispositivos de administración y Schneider Electric Cloud a través de comunicaciones cifradas.</li>
+</ul>
                             <div class="clearfix"></div>
 
                             

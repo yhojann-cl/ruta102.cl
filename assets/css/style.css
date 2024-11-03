@@ -53,9 +53,19 @@ a.btn-outline-info:active {
     color: rgba(0, 0, 0, 0.9);
 }
 
-main b {
+main b, main strong {
     font-weight: 300;
     color: rgb(93 255 241);
+}
+
+main.component-article h1,
+main.component-article h2,
+main.component-article h3,
+main.component-article h4,
+main.component-article h5,
+main.component-article h6 {
+    margin-top: 1.6rem;
+    margin-bottom: 0.6rem;
 }
 
 nav.justify-content-between > a,
@@ -66,9 +76,9 @@ nav.justify-content-between > a:active {
     color: rgba(9, 252, 231, 1);
 }
 
-.table-cvss {
+/*.table-cvss {
     table-layout: fixed;
-}
+}*/
 
 .img-thumbnail {
     background-color: transparent;
