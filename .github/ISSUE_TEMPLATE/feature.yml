@@ -1,6 +1,6 @@
 name: Propuesta de nuevas ideas
 description: Proposición de ideas, cambios, mejoras y nuevas características.
-title: 'Idea: Título de su idea a proponer'
+title: '[Feature] Título de su idea a proponer'
 labels: ['feature', 'triage']
 body:
   - type: textarea

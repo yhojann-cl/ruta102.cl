@@ -1,6 +1,6 @@
 name: Propuesta de nuevo contenido
 description: Proposición de nuevo contenido para el sitio WEB.
-title: '[publicación] Título de la publicación'
+title: '[Publicación] Título de la publicación'
 labels: ['content', 'triage']
 body:
   - type: markdown

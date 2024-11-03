@@ -4,7 +4,6 @@
 **seguridad informática**. Nuestro objetivo es ofrecer contenido realista, de
 alta calidad y actualizado para profesionales y entusiastas de la tecnología.
 
----
 
 ## ¿Qué encontrarás en Ruta102.cl?
 
@@ -25,23 +24,20 @@ informática. Esta sección incluye sitios de referencia, documentación oficial
 herramientas recomendadas para profundizar en temas de ciberseguridad y
 desarrollo tecnológico.
 
----
 
 ## ¿Por qué seguirnos?
 
 - **Contenidos verificados**: Nos aseguramos de ofrecer información precisa, validada por expertos y fuentes confiables.
 - **Compromiso con la comunidad**: Fomentamos el crecimiento y el aprendizaje de la comunidad tecnológica, compartiendo recursos útiles y promoviendo el conocimiento en seguridad informática.
 
----
 
 ## Cómo colaborar
 
 Si te interesa contribuir o colaborar con **Ruta102.cl**, puedes hacerlo creando
-un nuevo [Ticket en Github](https://github.com/yhojann-cl/ruta102.cl/issues).
+un nuevo [Issue en Github](https://github.com/yhojann-cl/ruta102.cl/issues).
 Estamos abiertos a recibir artículos, sugerencias de temas y cualquier
 colaboración que aporte valor a nuestra comunidad.
 
----
 
 ## Conéctate con nosotros
 
