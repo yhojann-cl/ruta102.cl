@@ -4,7 +4,7 @@ title: '[publicación] Título de la publicación'
 labels: ['content', 'triage']
 body:
   - type: markdown
-    id: content
+    id: introduction
     attributes:
       value: |
         **Contenido propuesto a publicar manteniendo el formato Markdown.**
@@ -15,6 +15,13 @@ body:
         - Se agradece si se incluyen imagenes y se mantiene el orden de redacción.
         - Evitar el abuso de grocerias.
         ---
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: Contenido
+      description: Contenido propuesto o detalle de la proposición de contenido.
     validations:
       required: true
   - type: textarea
