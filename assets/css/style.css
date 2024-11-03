@@ -76,10 +76,6 @@ nav.justify-content-between > a:active {
     color: rgba(9, 252, 231, 1);
 }
 
-/*.table-cvss {
-    table-layout: fixed;
-}*/
-
 .img-thumbnail {
     background-color: transparent;
 }
