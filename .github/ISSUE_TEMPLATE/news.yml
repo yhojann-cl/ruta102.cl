@@ -9,11 +9,8 @@ body:
       value: |
         **Contenido propuesto a publicar manteniendo el formato Markdown.**
         Antes de realizar una propuesta de contenido recuerde lo siguiente:
-        - El tipo de contenido debe estar acorde a los temas de Ruta102 sin offtopics.
-        - Puedes proponer contenido desde una URL sin la necesidad de escribir todo su contenido si no tienes tiempo para ello pero consideras que es un contenido importante a considerar.
-        - Se agradece la colaboración si se redacta todo contenido escrito en este issue.
-        - Se agradece si se incluyen imagenes y se mantiene el orden de redacción.
-        - Evitar el abuso de grocerias.
+        - Leer la [Guía de Publicación para Colaboradores](https://github.com/yhojann-cl/ruta102.cl/blob/master/GUIDELINES.md).
+        - Puedes proponer contenido desde una URL sin la necesidad de escribir todo su contenido si no tienes tiempo para ello pero consideras que es muy importante.
         ---
     validations:
       required: true

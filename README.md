@@ -38,6 +38,9 @@ un nuevo [Issue en Github](https://github.com/yhojann-cl/ruta102.cl/issues).
 Estamos abiertos a recibir artículos, sugerencias de temas y cualquier
 colaboración que aporte valor a nuestra comunidad.
 
+Antes de proponer una publicacion recuerda leer la
+[Guía de Publicación para Colaboradores](https://github.com/yhojann-cl/ruta102.cl/blob/master/GUIDELINES.md).
+
 
 ## Conéctate con nosotros
 
