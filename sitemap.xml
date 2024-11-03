@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+            <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+            <url>
+                <loc>https://ruta102.com</loc>
+                <priority>1.0</priority>
+                <changefreq>daily</changefreq>
+            </url>
+            
+                 <url>
+                      <loc>https://ruta102.com/articulos/bug-bounty/</loc>
+                      <priority>1.0</priority>
+                      <changefreq>daily</changefreq>
+                 </url>
+            
+                 <url>
+                      <loc>https://ruta102.com/articulos/filtraciones/</loc>
+                      <priority>1.0</priority>
+                      <changefreq>daily</changefreq>
+                 </url>
+            
+                 <url>
+                      <loc>https://ruta102.com/articulos/vulnerabilidades/</loc>
+                      <priority>1.0</priority>
+                      <changefreq>daily</changefreq>
+                 </url>
+            
+            </urlset>

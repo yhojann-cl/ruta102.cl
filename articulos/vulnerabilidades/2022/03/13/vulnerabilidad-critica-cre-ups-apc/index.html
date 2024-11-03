@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+            <html>
+                <!--
+                    ██████╗ ██╗   ██╗████████╗ █████╗   ██╗ ██████╗ ██████╗
+                    ██╔══██╗██║   ██║╚══██╔══╝██╔══██╗ ███║██╔═████╗╚════██╗
+                    ██████╔╝██║   ██║   ██║   ███████║ ╚██║██║██╔██║ █████╔╝
+                    ██╔══██╗██║   ██║   ██║   ██╔══██║  ██║████╔╝██║██╔═══╝
+                    ██║  ██║╚██████╔╝   ██║   ██║  ██║  ██║╚██████╔╝███████╗
+                    ╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝  ╚═╝ ╚═════╝ ╚══════╝ ®
+                    Tus noticias 1337 H4x0r del año 2077.
+                -->
+                <head>
+                    <meta charset="utf-8" />
+                    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+                    <link rel="shortcut icon" href="/assets/img/favicon-32x32.png" type="image/png" />
+                    <link rel="icon" href="/assets/img/favicon-32x32.png" type="image/png" />
+
+                    <title>Ruta102 - Vulnerabilidad cr&#237;tica en sistemas de respaldos de energ&#237;a UPS de APC &#40;CVE-2022-22806&#41;</title>
+                    <meta name="theme-color" content="#4d4948" />
+                    <meta name="description" content="Noticias tecnol&oacute;gicas" />
+                    <link rel="alternate" type="application/rss+xml" title="Ruta102" href="/rss.xml" />
+
+                    <link rel="preconnect" href="https://fonts.googleapis.com" />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Lobster&display=swap" rel="stylesheet" />
+
+                    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+                    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
+                    <link href="/assets/css/style.css" rel="stylesheet" />
+
+                    <script src="/assets/js/bootstrap.min.js"></script>
+                </head>
+                <body>
+                    <div class="container">
+                        <header class="border-bottom py-3 text-center">
+                            <a class="text-decoration-none logo display-1 fw-normal" href="/">Ruta102</a>
+                        </header>
+                        <div class="nav-scroller py-1">
+                            <nav class="nav d-flex justify-content-between pb-0">
+                                
+                                    <a class="p-2 text-decoration-none" href="/articulos/bug-bounty/">
+                                        Bug bounty
+                                    </a>
+                                
+                                    <a class="p-2 text-decoration-none" href="/articulos/filtraciones/">
+                                        Filtraciones
+                                    </a>
+                                
+                                    <a class="p-2 text-decoration-none" href="/articulos/vulnerabilidades/">
+                                        Vulnerabilidades
+                                    </a>
+                                
+                            </nav>
+                        </div>
+                    </div>
+                    <main role="main" class="container">
+                        
+                            <div class="mb-4 mt-3">
+                                <h1>
+                                    <a href="/articulos/vulnerabilidades/2022/03/13/vulnerabilidad-critica-cre-ups-apc/">Vulnerabilidad cr&#237;tica en sistemas de respaldos de energ&#237;a UPS de APC &#40;CVE-2022-22806&#41;</a>
+                                </h1>
+                                
+                                    <p class="text-muted">
+                                        13 de marzo de 2022 por
+                                        <a href="https://www.linkedin.com/in/yhojann-aguilera/" target="_blank">Yhojann Aguilera Aguayo</a>
+                                        en
+                                        <a href="/articulos/vulnerabilidades/">Vulnerabilidades</a>.
+                                    </p>
+                                
+                            </div>
+                        
+
+                        <div>
+                                
+                                <img
+                                    title="Vulnerabilidad crítica en sistemas de respaldos de energía UPS de APC (CVE-2022-22806)"
+                                    alt="img"
+                                    class="d-none d-md-inline float-start me-3 mb-3 img-thumbnail"
+                                    style="width: 200px; height: 250px;"
+                                    src="/assets/img/vendors/ups-apc.png" />
+                            
+                            
+            <h3>Resumen</h3>
+            <p>
+                En Chile existe la gran preocupación entre distintas empresas,
+                debido a una serie de vulnerabilidades en equipos UPS de
+                respaldo de energía que podría poner en jaque el suministro
+                eléctrico y sus equipos conectados.
+            </p>
+            <p>
+                Se ha publicado recientemente diversos problemas en los sistemas
+                UPS de protección de energía de la empresa APC los cuales pueden
+                comprometer el sistema de suministro en una empresa. Lo más
+                preocupante es que esta vulnerabilidad puede ser aprovechada de
+                manera remota y <b>puede provocar un daño físico a los
+                equipos</b>.
+            </p>
+            <p>
+                Este grupo de vulnerabilidades ha sido llamada TLStorm y se ha
+                catalogado por los expertos como una de las vulnerabilidades más
+                preocupantes de lo que va del año.
+            </p>
+            <p>
+                Cabe mencionar que estos equipos de protección de energía son
+                componentes críticos para distintas infraestructuras, tales como
+                de gobierno, salud, seguridad física en general, centros de
+                datos y similares.
+            </p>
+            <h3 class="mt-4">El riesgo</h3>
+            <p>
+                A continuación, se desglosa el riesgo por cada vulnerabilidad:
+            </p>
+            <ul>
+                <li>
+                    <b>CVE-2022-22806</b> de severidad crítica, con una puntuación CVSS3 9.0. Esta vulnerabilidad se debe a errores de la biblioteca nanoSSL, provocando un problema de estado en el protocolo de enlace TLS, omitiendo la autenticación de este (TLS), con lo cual permitiría a un atacante remoto no autenticado la ejecución remota de código (RCE).
+                </li>
+                <li>
+                    <b>CVE-2022-22805</b> de severidad crítica, con una puntuación CVSS3 9.0. Esta vulnerabilidad se debe a errores de la biblioteca nanoSSL, provocando un error de corrupción de memoria en el reensamblaje de paquetes. Un atacante remoto no autenticado podría aprovechar el error de biblioteca nanoSSL y realizar ejecución remota de código (RCE).
+                </li>
+                <li>
+                    <b>CVE-2022-0715</b> de severidad crítica, con una puntuación CVSS 9.0. Esta vulnerabilidad se debe a una falla de diseño, en la que las actualizaciones de firmware en los dispositivos afectados no se firman criptográficamente de manera segura. Un atacante podría aprovechar esta vulnerabilidad y crear firmware malintencionado e instalarlo mediante varias rutas, como Internet, LAN o una unidad USB, provocando la ejecución remota de código (RCE).
+                </li>
+            </ul>
+            <h3 class="mt-4">Algunas fuentes</h3>
+            <ul>
+                <li><a rel="noreferrer" target="_blank" href="https://nvd.nist.gov/vuln/detail/CVE-2022-22806">https://nvd.nist.gov/vuln/detail/CVE-2022-22806</a></li>
+                <li><a rel="noreferrer" target="_blank" href="https://www.cert.gov.py/noticias/vulnerabilidades-criticas-en-los-dispositivos-smart-ups-de-apc">https://www.cert.gov.py/noticias/vulnerabilidades-criticas-en-los-dispositivos-smart-ups-de-apc</a></li>
+                <li><a rel="noreferrer" target="_blank" href="https://www.armis.com/research/tlstorm/">https://www.armis.com/research/tlstorm/</a>
+                <li><a rel="noreferrer" target="_blank" href="https://underc0de.org/foro/noticias-informaticas-120/los-errores-de-dia-cero-de-apc-ups-pueden-quemar-dispositivos-de-forma-remota/">https://underc0de.org/foro/noticias-informaticas-120/los-errores-de-dia-cero-de-apc-ups-pueden-quemar-dispositivos-de-forma-remota/</a></li>
+            </ul>
+
+            <h3 class="mt-4">Análisis del impacto</h3>
+            <p>
+                Según fuentes oficiales, el problema principal reside en la
+                <b>implementación de SSL/TLS</b>, un protocolo ámpliamente
+                utilizado para el resguardo de la comunicación entre servicios
+                bajo TCP, pero en este caso el componente afectado es la
+                funcionalidad de <b>SmartConnect</b> el cual se encarga de la
+                comunicación entre diferentes dispositivos de Smart-UPS.
+                Directamente hablando se trata de la <b>ejecución de código
+                debido a la corrupción de memoria</b> por a un desbbordamiento
+                no controlado.
+            </p>
+            <p>
+                Adicionalmente a este problema, también cuenta con otra
+                vulnerabilidad totalmente distinta la cual permite a un
+                delincuente informático a <b>evadir el mecanismo de encriptado
+                del Firmware</b> debido a que este carece de una llave
+                criptográfica.
+            </p>
+            <p>
+                Estas dos vulnerabilidades juntas <b>pueden permitir a un atacante
+                dentro de la red local del equipo afectado, corromper la memoria
+                de estos equipos e instalar un nuevo firmware infectado</b>.
+            </p>
+            <p>
+                Hay que recordar que estos equipos mantienen una conectividad de
+                manera física con los componentes electrónicos <b>sin ningún
+                mecanismo de tipo Sandboxing o isolación</b> que pudiesen
+                proteger al circuito eléctrico de posibles ataques vía Software
+                como si lo hace una placa madre de un computador, servidor o
+                dispositivo móvil. Esto abre la posibilidad de <b>estropear
+                físicamente los componentes a traves del cambio de voltaje,
+                interrupciones y similares</b>.
+            </p>
+
+            <h3 class="mt-4">Recomendaciones a los usuarios</h3>
+            <p>
+                Schneider Electric ha publicado recientemente
+                <a rel="noreferrer" target="_blank" href="ttps://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2022-067-02">una
+                actualización de seguridad crítica</a> que soluciona este
+                problema, por lo cual se recomienda aplicar este parche lo antes
+                posible.
+            </p>
+            <p>
+                <a rel="noreferrer" target="_blank" href="https://www.armis.com/research/tlstorm/">El
+                grupo de investigación Armis</a> que ha encontrado este fallo y
+                lo ha reportado oportunamente mencionan las siguientes
+                recomendaciones:
+            </p>
+            <ul>
+                <li>Instale los parches disponibles en el sitio web de Schneider Electric.</li>
+                <li>Si está utilizando la NMC, cambie la contraseña predeterminada de la NMC ("apc") e instale un certificado SSL firmado públicamente para que un atacante en su red no pueda interceptar la nueva contraseña. Para limitar aún más la superficie de ataque de su NMC, consulte el Manual de seguridad de Schneider Electric para NMC2 y NMC3.</li>
+                <li>Implemente listas de control de acceso (ACL) en las que los dispositivos UPS solo pueden comunicarse con un pequeño conjunto de dispositivos de administración y Schneider Electric Cloud a través de comunicaciones cifradas.</li>
+            </ul>
+        
+                            <div class="clearfix"></div>
+                        </div>
+                    </main>
+                    <footer class="py-5">
+                        <div class="container border-top pt-4 text-center">
+                            <p>
+                                Ruta102 es una editorial Chilena fundada en el
+                                a&ntilde;o 2021, que tiene como objetivo
+                                informar <b>de manera realista</b>
+                                informaci&oacute;n tecnol&oacute;gica realmente
+                                relevantes velando por el tiempo y la necesidad
+                                de sus lectores. <a href="/acerca-de/">Leer
+                                m&aacute;s</a>
+                            </p>
+                            <p>
+                                <a
+                                    class="btn btn-sm btn-outline-info align-items-center mx-1"
+                                    href="/rss.xml" target="_blank">
+                                    <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rss" viewBox="0 0 16 16">
+                                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                        <path d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z"/>
+                                    </svg>
+                                    RSS
+                                </a>
+                                <a
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    class="btn btn-sm btn-outline-info align-items-center mx-1"
+                                    href="https://twitter.com/Ruta102Chile" target="_blank">
+                                    <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                    </svg>
+                                    Twitter
+                                </a>
+                                <a
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    class="btn btn-sm btn-outline-info align-items-center mx-1"
+                                    href="https://play.google.com/store/apps/details?id=com.google.android.apps.magazines">
+                                    <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google-play" viewBox="0 0 16 16">
+                                        <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295ZM1 13.396V2.603L6.846 8 1 13.396ZM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"/>
+                                    </svg>
+                                    Aplicaci&oacute;n
+                                </a>
+                                <a
+                                    class="btn btn-sm btn-outline-info align-items-center mx-1"
+                                    href="mailto:info@ruta102.cl">
+                                    <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                                    </svg>
+                                    Cont&aacute;ctanos
+                                </a>
+                            </p>
+                        </div>
+                    </footer>
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X7D59X87WR"></script>
+                    <script>
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){ dataLayer.push(arguments); }
+                        gtag('js', new Date());
+                        gtag('config', 'G-X7D59X87WR');
+                    </script>
+                </body>
+            </html>

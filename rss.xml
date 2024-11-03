@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+            <rss version="2.0"
+            	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+            	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+            	xmlns:dc="http://purl.org/dc/elements/1.1/"
+            	xmlns:atom="http://www.w3.org/2005/Atom"
+            	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+            	xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+                <channel>
+                    <title>Ruta102</title>
+                    <atom:link href="https://ruta102.com/rss.xml" rel="self" type="application/rss+xml" />
+                    <link>https://ruta102.com</link>
+                    <description>Noticias tecnológicas</description>
+                    
+                        <item>
+                            <title>Acceso no autorizado a los sistemas cr&#237;ticos de Uber</title>
+                            <link>https://ruta102.com/articulos/filtraciones/2022/09/16/filtracion-uber/</link>
+                            <dc:creator>Yhojann Aguilera Aguayo</dc:creator>
+                            <pubDate>2022-09-16T03:00:00.000Z</pubDate>
+                            <category>Filtraciones</category>
+                            <guid isPermaLink="true">https://ruta102.com/articulos/filtraciones/2022/09/16/filtracion-uber/</guid>
+                            <description><![CDATA[
+                                
+
+        
+                                <p><a href="https://ruta102.com/articulos/filtraciones/2022/09/16/filtracion-uber/">Leer más »</a></p>
+                            ]]></description>
+                        </item>
+                    
+                        <item>
+                            <title>Vulnerabilidades cr&#237;ticas en SAP obliga a empresas a realizar actualizaciones de emergencia</title>
+                            <link>https://ruta102.com/articulos/vulnerabilidades/2022/03/15/sap-se-actualiza-log4shell/</link>
+                            <dc:creator>Yhojann Aguilera Aguayo</dc:creator>
+                            <pubDate>2022-03-15T03:00:00.000Z</pubDate>
+                            <category>Vulnerabilidades</category>
+                            <guid isPermaLink="true">https://ruta102.com/articulos/vulnerabilidades/2022/03/15/sap-se-actualiza-log4shell/</guid>
+                            <description><![CDATA[
+                                
+            <p>
+                Se ha publicado recientemente una serie de vulnerabilidades
+                críticas en el sistema ERP de SAP que permitiría a un atacante
+                tomar control de la solución incluyendo todos sus datos.
+            </p>
+            <p>
+                Esto quiere decir que sin autorización alguna un atacante podría
+                modificar toda la contabilidad de una empresa y realizar fraude
+                fiscal.
+            </p>
+        
+                                <p><a href="https://ruta102.com/articulos/vulnerabilidades/2022/03/15/sap-se-actualiza-log4shell/">Leer más »</a></p>
+                            ]]></description>
+                        </item>
+                    
+                        <item>
+                            <title>Vulnerabilidad cr&#237;tica en sistemas de respaldos de energ&#237;a UPS de APC &#40;CVE-2022-22806&#41;</title>
+                            <link>https://ruta102.com/articulos/vulnerabilidades/2022/03/13/vulnerabilidad-critica-cre-ups-apc/</link>
+                            <dc:creator>Yhojann Aguilera Aguayo</dc:creator>
+                            <pubDate>2022-03-13T03:00:00.000Z</pubDate>
+                            <category>Vulnerabilidades</category>
+                            <guid isPermaLink="true">https://ruta102.com/articulos/vulnerabilidades/2022/03/13/vulnerabilidad-critica-cre-ups-apc/</guid>
+                            <description><![CDATA[
+                                
+            <p>
+                Se ha publicado recientemente diversos problemas en los sistemas
+                UPS de protección de energía de la empresa APC los cuales pueden
+                comprometer el sistema de suministro en una empresa. Lo más
+                preocupante es que esta vulnerabilidad puede ser aprovechada de
+                manera remota y <b>puede provocar un daño físico a los
+                equipos</b>.
+            </p>
+            <p>
+                Este grupo de vulnerabilidades ha sido llamada TLStorm y se ha
+                catalogado por los expertos como una de las vulnerabilidades más
+                preocupantes de lo que va del año.
+            </p>
+        
+                                <p><a href="https://ruta102.com/articulos/vulnerabilidades/2022/03/13/vulnerabilidad-critica-cre-ups-apc/">Leer más »</a></p>
+                            ]]></description>
+                        </item>
+                    
+                        <item>
+                            <title>Vulnerabilidad cr&#237;tica Mozilla Firefox 97.0.2 permite ejecuci&#243;n de c&#243;digo &#40;CVE-2022-26485&#41;</title>
+                            <link>https://ruta102.com/articulos/vulnerabilidades/2022/03/11/mozilla-firefox-cre-cve-2022-26486/</link>
+                            <dc:creator>Yhojann Aguilera Aguayo</dc:creator>
+                            <pubDate>2022-03-11T03:00:00.000Z</pubDate>
+                            <category>Vulnerabilidades</category>
+                            <guid isPermaLink="true">https://ruta102.com/articulos/vulnerabilidades/2022/03/11/mozilla-firefox-cre-cve-2022-26486/</guid>
+                            <description><![CDATA[
+                                
+            <p>
+                Se publicó un problema de seguridad crítico en Mozilla Firefox
+                97.0.2 el cual permite la ejecución de código remoto, esto
+                quiere decir que con tan solo visitar un sitio WEB malicioso, un
+                atacante podría ejecutar comandos en el Sistema Operativo ya que
+                esta vulnerabilidad también impacta en el mecanismo de seguridad
+                de Sandboxing que protege al navegador frente a la ejecución de
+                código.
+            </p>
+            <p>
+                Un usuario podría exponer todos sus datos de usuario tales como
+                contraseñas, sesiones guardadas y datos de otras aplicaciones
+                instaladas en el Sistema Operativo.
+            </p>
+        
+                                <p><a href="https://ruta102.com/articulos/vulnerabilidades/2022/03/11/mozilla-firefox-cre-cve-2022-26486/">Leer más »</a></p>
+                            ]]></description>
+                        </item>
+                    
+                        <item>
+                            <title>Vulnerabilidad cr&#237;tica en Microsoft Exchange Server 2019 permite ejecuci&#243;n de c&#243;digo remoto &#40;CVE-2022-23277&#41;</title>
+                            <link>https://ruta102.com/articulos/vulnerabilidades/2022/03/11/exchange-vulnerabilidad-critica/</link>
+                            <dc:creator>Yhojann Aguilera Aguayo</dc:creator>
+                            <pubDate>2022-03-11T03:00:00.000Z</pubDate>
+                            <category>Vulnerabilidades</category>
+                            <guid isPermaLink="true">https://ruta102.com/articulos/vulnerabilidades/2022/03/11/exchange-vulnerabilidad-critica/</guid>
+                            <description><![CDATA[
+                                
+            <p>
+                Se publicó un problema de seguridad crítico en Microsoft
+                Exchange 2019 el cual permite la ejecución de código remoto,
+                esto quiere decir que un atacante desde internet tiene la
+                posibilidad de acceder a la información interna del servicio de
+                correos, modificar o eliminar información, también podría
+                ejecutar comandos sin autorización dentro del Sistema Operativo.
+            </p>
+        
+                                <p><a href="https://ruta102.com/articulos/vulnerabilidades/2022/03/11/exchange-vulnerabilidad-critica/">Leer más »</a></p>
+                            ]]></description>
+                        </item>
+                    
+                        <item>
+                            <title>Vulnerabilidad cr&#237;tica en el kernel de Linux permite ejecuci&#243;n de c&#243;digo &#40;CVE-2022-23222&#41;</title>
+                            <link>https://ruta102.com/articulos/vulnerabilidades/2022/03/08/vulnerabilidad-kernel-de-linux-cve-2022-23222/</link>
+                            <dc:creator>Yhojann Aguilera Aguayo</dc:creator>
+                            <pubDate>2022-03-08T03:00:00.000Z</pubDate>
+                            <category>Vulnerabilidades</category>
+                            <guid isPermaLink="true">https://ruta102.com/articulos/vulnerabilidades/2022/03/08/vulnerabilidad-kernel-de-linux-cve-2022-23222/</guid>
+                            <description><![CDATA[
+                                
+            <p>
+                Se publicó un problema de seguridad crítico en el Kernel de Linux
+                5.15.14 el cual permite la ejecución de código y la elevación de
+                privilegios, por lo cual se concluye que un atacante que logre
+                explotar esta vulnerabilidad podrá tomar control total del Sitema
+                Operativo y todos sus datos.
+            </p>
+            <p>
+                Esta vulnerabilidad tiene un valor de riesgo de 7.8 (Alto) en la
+                tabla de criticidad de la CVSS3.
+            </p>
+        
+                                <p><a href="https://ruta102.com/articulos/vulnerabilidades/2022/03/08/vulnerabilidad-kernel-de-linux-cve-2022-23222/">Leer más »</a></p>
+                            ]]></description>
+                        </item>
+                    
+                        <item>
+                            <title>M&#225;s de 300.000 cuentas vulneradas de Mercadolibre</title>
+                            <link>https://ruta102.com/articulos/filtraciones/2022/03/07/filtracion-codigo-fuente-mercadolibre/</link>
+                            <dc:creator>Yhojann Aguilera Aguayo</dc:creator>
+                            <pubDate>2022-03-07T03:00:00.000Z</pubDate>
+                            <category>Filtraciones</category>
+                            <guid isPermaLink="true">https://ruta102.com/articulos/filtraciones/2022/03/07/filtracion-codigo-fuente-mercadolibre/</guid>
+                            <description><![CDATA[
+                                
+            <p>
+                Un grupo de conocidos delincuentes informáticos conocidos por exponer
+                una grán cantidad de información confidencial de distintas compañías,
+                bajo pseudónimo <i>Lapsus$</i>, ha amenazado con <b>filtrar los
+                códigos fuentes de los sistemas de Mercadolibre</b>.
+            </p>
+            <p>
+                El grán problema es que no se trata de cualquier código fuente, sino
+                más bien de los sistemas relacionados con la autenticación y
+                autorización críticos de los dispositivos móviles, específicamente
+                <b>los sistemas biométricos</b>.
+            </p>
+            <p>
+                <b>Se ha confirmado</b>, a traves de un
+                <a rel="noreferrer" target="_blank" href="https://twitter.com/vidusky/status/1500942042834350084">comunicado oficial</a>
+                que no ha afectado a la información confidencial de los datos de
+                acceso de ningún trabajador o cliente, pero por otro lado también
+                indican que de todas maneras <b>los datos personales de más de
+                300.000 usuarios fueron extraidos de manera ilegal</b>.
+            </p>
+        
+                                <p><a href="https://ruta102.com/articulos/filtraciones/2022/03/07/filtracion-codigo-fuente-mercadolibre/">Leer más »</a></p>
+                            ]]></description>
+                        </item>
+                    
+                </channel>
+            </rss>

@@ -1,0 +1,122 @@
+:root {
+    color-scheme: dark;
+}
+
+body {
+    background-color: rgba(51, 51, 51, 1);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+footer {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    color: rgba(0, 255, 127, 1);
+}
+
+h1, h2, h3, h4, h5, h6,
+.display-1, .display-2, .display-3, .display-4 {
+    font-family: 'Roboto Slab';
+}
+
+header a.logo{
+    font-family: 'Lobster';
+    color: rgba(0, 255, 127, 1);
+}
+
+.border,
+.border-bottom,
+.border-top,
+.border-start,
+.border-end,
+.img-thumbnail {
+    border-color: #666666 !important;
+}
+
+.bg-gray {
+    background-color: rgba(60, 60, 60, 1);
+}
+
+.btn-outline-info,
+a.btn-outline-info:visited {
+    color: rgba(9, 252, 231, 1);
+    border-color: rgba(9, 252, 231, 1);
+}
+
+a.btn-outline-info:hover,
+a.btn-outline-info:active {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+main b {
+    font-weight: 300;
+    color: rgb(93 255 241);
+}
+
+nav.justify-content-between > a,
+nav.justify-content-between > a:hover,
+nav.justify-content-between > a:visited,
+nav.justify-content-between > a:focus,
+nav.justify-content-between > a:active {
+    color: rgba(9, 252, 231, 1);
+}
+
+.table-cvss {
+    table-layout: fixed;
+}
+
+.img-thumbnail {
+    background-color: transparent;
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: .875rem;
+}
+
+.card-img-right {
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+    .h-md-250 { height: 250px; }
+}
+
+@media (min-width: 40em) {
+    .blog-title {
+        font-size: 3.5rem;
+    }
+}
