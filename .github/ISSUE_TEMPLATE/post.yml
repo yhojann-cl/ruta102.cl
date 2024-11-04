@@ -20,7 +20,7 @@ body:
     id: summary
     attributes:
       label: Resumen o sumario
-      description: Resumen en pocas palabras, no más de 800 caracteres y sin imagenes.
+      description: Resumen en pocas palabras, no más de 2 párrafos y 800 caracteres, sin imagenes, tablas ni subtítulos.
     validations:
       required: true
   - type: textarea
