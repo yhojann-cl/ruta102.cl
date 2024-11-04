@@ -1,6 +1,6 @@
-name: Propuesta de nuevo contenido
-description: Proposición de nuevo contenido para el sitio WEB.
-title: '[Publicación] Título de la publicación'
+name: Nuevo post de contenido
+description: Nuevo post de contenido para el sitio WEB.
+title: '[post] Título del post'
 labels: ['content', 'triage']
 body:
   - type: markdown
@@ -11,6 +11,7 @@ body:
         Antes de realizar una propuesta de contenido recuerde lo siguiente:
         - Leer la [Guía de Publicación para Colaboradores](https://github.com/yhojann-cl/ruta102.cl/blob/master/GUIDELINES.md).
         - Puedes proponer contenido desde una URL sin la necesidad de escribir todo su contenido si no tienes tiempo para ello pero consideras que es muy importante.
+        - Todo contenido está sujeto a aprobación antes de ser publicado.
         ---
     validations:
       required: true
@@ -18,14 +19,14 @@ body:
     id: content
     attributes:
       label: Contenido
-      description: Contenido propuesto o detalle de la proposición de contenido.
+      description: Contenido o detalle del post.
     validations:
       required: true
   - type: textarea
     id: sources
     attributes:
       label: Fuentes
-      description: Indique las fuentes del contenido propuesto si aplica.
+      description: Indique las fuentes del contenido si aplica.
     validations:
       required: false
   - type: input
