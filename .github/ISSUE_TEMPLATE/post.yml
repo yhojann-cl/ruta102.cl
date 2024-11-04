@@ -12,6 +12,7 @@ body:
         - Leer la [Guía de Publicación para Colaboradores](https://github.com/yhojann-cl/ruta102.cl/blob/master/GUIDELINES.md).
         - Puedes proponer contenido desde una URL sin la necesidad de escribir todo su contenido si no tienes tiempo para ello pero consideras que es muy importante.
         - Todo contenido está sujeto a aprobación antes de ser publicado.
+        - Recordar que los subtítulos son H3, o sea que en formato markdown son `###`.
         ---
     validations:
       required: true
