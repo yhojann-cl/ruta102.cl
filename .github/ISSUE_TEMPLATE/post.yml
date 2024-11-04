@@ -1,7 +1,7 @@
 name: Nuevo post de contenido
 description: Nuevo post de contenido para el sitio WEB.
-title: '[post] Título del post'
-labels: ['content', 'triage']
+title: 'Título del post'
+labels: ['post', 'triage']
 body:
   - type: markdown
     id: introduction
@@ -13,6 +13,7 @@ body:
         - Puedes proponer contenido desde una URL sin la necesidad de escribir todo su contenido si no tienes tiempo para ello pero consideras que es muy importante.
         - Todo contenido está sujeto a aprobación antes de ser publicado.
         - Recordar que los subtítulos son H4, o sea que en formato markdown son `####`.
+        - Recordar asignar una o mas categorías desde el menú de categorías del issue.
         ---
     validations:
       required: true
@@ -37,10 +38,3 @@ body:
       description: Indique las fuentes del contenido si aplica.
     validations:
       required: false
-  - type: input
-    id: categories
-    attributes:
-      label: Categorías
-      description: Categorías separados por coma.
-    validations:
-      required: true
