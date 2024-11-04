@@ -6,12 +6,17 @@ Bienvenidos, publicadores y colaboradores de **Ruta102.cl**. Para asegurar que e
 
 ## Reglas de Publicación
 
+### 1. Todo contenido debe estar escrito en español
+- Los artículos deben estar escritos en español para una mejor comprension de lectura para todo tipo de lector.
+- No se permite el uso de otros lenguajes que no sea el adoptado por la Real Academia Española.
+
 ### 1. Mantén el Enfoque en Tecnología y Seguridad
 - Los artículos deben centrarse en temas de **tecnología** y **seguridad informática**.
 - **Evita los off-topics** o temas irrelevantes. Si el contenido no se relaciona directamente con nuestro enfoque, no será publicado.
+- Se prohibe todo contenido de spam, con fines publicitarios y/o ideológicos.
 
 ### 2. Usa un Lenguaje Respetuoso y Profesional
-- Evita **groserías** y **lenguaje inapropiado**. Mantenemos un espacio inclusivo y profesional.
+- Evita **groserías** y **lenguaje inapropiado**. Mantenemos un espacio profesional.
 - Trata de usar un **tono neutro y respetuoso** hacia todos los lectores y figuras mencionadas en el artículo.
 
 ### 3. Cita las Fuentes y Enlaces Externos
