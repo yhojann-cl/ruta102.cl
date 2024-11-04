@@ -17,10 +17,17 @@ body:
     validations:
       required: true
   - type: textarea
+    id: summary
+    attributes:
+      label: Resumen o sumario
+      description: Resumen en pocas palabras, no más de 800 caracteres y sin imagenes.
+    validations:
+      required: true
+  - type: textarea
     id: content
     attributes:
       label: Contenido
-      description: Contenido o detalle del post.
+      description: Contenido completo o detalle del post.
     validations:
       required: true
   - type: textarea
